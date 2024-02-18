@@ -34,7 +34,7 @@ export const userApiSlice = apiSlice.injectEndpoints({
       query: () => ({
         url: USERS_URL,
       }),
-      providesTags: ["User"],
+      providesTags: ["User"], // if we don't do this then we might have to reload the page to actually see it go away
       keepUnusedDataFor: 5,
     }),
     deleteUser: builder.mutation({
